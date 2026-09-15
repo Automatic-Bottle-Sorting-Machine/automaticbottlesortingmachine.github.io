@@ -1649,3 +1649,19 @@ body::before {
         transition-duration: 0.01ms !important;
     }
 }
+
+.github-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #111;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.github-btn:hover {
+    transform: translateY(-3px);
+    opacity: 0.85;
+}
