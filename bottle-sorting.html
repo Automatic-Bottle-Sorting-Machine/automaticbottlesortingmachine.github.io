@@ -1,0 +1,1475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Bottle Sorting System | Group-09</title>
+
+    <!-- Google Fonts -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Project CSS -->
+    <link rel="stylesheet" href="bottle-sorting.css">
+</head>
+
+<body>
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+<header class="project-header">
+
+    <nav class="project-nav">
+
+        
+
+        <div class="nav-title">
+            SMART BOTTLE SORTING SYSTEM
+        </div>
+
+        <div class="nav-status">
+            GROUP 09
+        </div>
+
+    </nav>
+
+</header>
+
+
+<main>
+
+<!-- =========================
+     HERO SECTION
+========================= -->
+<section class="hero section">
+
+    <div class="hero-content">
+
+        <div class="eyebrow">
+            COE12992 · COLLABORATIVE HARDWARE PROJECT
+        </div>
+
+        <h1>
+            Smart Bottle
+            <span>Sorting System</span>
+        </h1>
+
+        <p class="hero-description">
+            A low-cost Arduino-based automated sorting prototype
+            designed to identify and separate metal, plastic and
+            paper bottles using sensor-based classification.
+        </p>
+
+        <div class="hero-meta">
+
+            <div class="meta-item">
+                <span class="meta-label">INSTITUTION</span>
+                <span class="meta-value">KDU</span>
+            </div>
+
+            <div class="meta-item">
+                <span class="meta-label">PROJECT</span>
+                <span class="meta-value">Group 09</span>
+            </div>
+
+            <div class="meta-item">
+                <span class="meta-label">PROGRESS</span>
+                <span class="meta-value">75%</span>
+            </div>
+
+        </div>
+
+        <div class="hero-buttons">
+
+            <a href="#overview" class="btn btn-primary">
+                Explore Project
+                <span>↓</span>
+            </a>
+
+            <!-- Replace # with your GitHub repository URL -->
+            <a href="#" class="btn btn-outline">
+                GitHub Repository
+                <span>↗</span>
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- PROJECT IMAGE -->
+    <div class="hero-visual">
+
+        <div class="image-decoration"></div>
+
+        <div class="project-image-frame">
+
+            <!-- Replace with your actual image filename -->
+            <img
+                src="assets/smart-bottle.jpg"
+                alt="Smart Bottle Sorting System prototype"
+            >
+
+            <div class="image-overlay"></div>
+
+        </div>
+
+        <div class="floating-label">
+            <span class="dot"></span>
+            PROTOTYPE · 2026
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PROGRESS
+========================= -->
+<section class="progress-section section">
+
+    <div class="section-heading">
+
+        <span class="section-number">01</span>
+
+        <div>
+            <p class="section-kicker">CURRENT STATUS</p>
+            <h2>Prototype Progress</h2>
+        </div>
+
+    </div>
+
+
+    <div class="progress-card">
+
+        <div class="progress-info">
+
+            <span class="progress-label">
+                PROJECT COMPLETION
+            </span>
+
+            <h3>
+                Core hardware implemented,
+                classification in progress.
+            </h3>
+
+            <p>
+                The metal detection pathway and mechanical
+                sorting mechanism are functional. The laser-LDR
+                module is currently being integrated and calibrated
+                for plastic and paper classification.
+            </p>
+
+        </div>
+
+
+        <div class="progress-circle">
+
+            <div class="progress-circle-inner">
+                <strong>75%</strong>
+                <span>Progress</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     OVERVIEW
+========================= -->
+<section class="section" id="overview">
+
+    <div class="section-heading">
+
+        <span class="section-number">02</span>
+
+        <div>
+            <p class="section-kicker">PROJECT OVERVIEW</p>
+            <h2>Turning Waste Into Data</h2>
+        </div>
+
+    </div>
+
+
+    <div class="overview-grid">
+
+        <article class="info-card large-card">
+
+            <div class="card-icon">01</div>
+
+            <h3>The Problem</h3>
+
+            <p>
+                Manual waste separation can be slow, inconsistent
+                and difficult to maintain in busy public environments.
+                Incorrect sorting can also reduce the efficiency of
+                recycling processes.
+            </p>
+
+        </article>
+
+
+        <article class="info-card">
+
+            <div class="card-icon">02</div>
+
+            <h3>Our Approach</h3>
+
+            <p>
+                We developed a compact Arduino-based system that
+                detects a bottle, identifies its material and
+                mechanically directs it into the appropriate
+                compartment.
+            </p>
+
+        </article>
+
+
+        <article class="info-card">
+
+            <div class="card-icon">03</div>
+
+            <h3>Target Users</h3>
+
+            <p>
+                The prototype is designed as a low-cost educational
+                and demonstration system suitable for institutions,
+                offices and recycling-focused environments.
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SYSTEM WORKFLOW
+========================= -->
+<section class="section workflow-section">
+
+    <div class="section-heading">
+
+        <span class="section-number">03</span>
+
+        <div>
+            <p class="section-kicker">SYSTEM ARCHITECTURE</p>
+            <h2>How It Works</h2>
+        </div>
+
+    </div>
+
+
+    <div class="workflow">
+
+        <div class="workflow-line"></div>
+
+
+        <div class="workflow-step">
+
+            <div class="workflow-number">01</div>
+
+            <div class="workflow-content">
+
+                <span>DETECTION</span>
+
+                <h3>IR Sensor</h3>
+
+                <p>
+                    Detects the presence of a bottle entering
+                    the sorting chamber.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="workflow-step">
+
+            <div class="workflow-number">02</div>
+
+            <div class="workflow-content">
+
+                <span>FIRST CLASSIFICATION</span>
+
+                <h3>Inductive Sensor</h3>
+
+                <p>
+                    Identifies metallic material before the
+                    optical classification stage.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="workflow-step">
+
+            <div class="workflow-number">03</div>
+
+            <div class="workflow-content">
+
+                <span>NON-METAL CLASSIFICATION</span>
+
+                <h3>Laser + LDR</h3>
+
+                <p>
+                    Measures transmitted light intensity to
+                    distinguish plastic from paper.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="workflow-step">
+
+            <div class="workflow-number">04</div>
+
+            <div class="workflow-content">
+
+                <span>MECHANICAL SORTING</span>
+
+                <h3>Stepper + Servo</h3>
+
+                <p>
+                    Rotates the three-compartment platter and
+                    opens the lid to release the bottle.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="workflow-step">
+
+            <div class="workflow-number">05</div>
+
+            <div class="workflow-content">
+
+                <span>FEEDBACK</span>
+
+                <h3>LED + Buzzer</h3>
+
+                <p>
+                    Provides visual and audible feedback for
+                    the sorting operation.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SORTING CATEGORIES
+========================= -->
+<section class="section">
+
+    <div class="section-heading">
+
+        <span class="section-number">04</span>
+
+        <div>
+            <p class="section-kicker">CLASSIFICATION</p>
+            <h2>Three Material Categories</h2>
+        </div>
+
+    </div>
+
+
+    <div class="material-grid">
+
+
+        <article class="material-card metal-card">
+
+            <div class="material-top">
+
+                <span class="material-number">01</span>
+
+                <div class="material-symbol">
+                    M
+                </div>
+
+            </div>
+
+            <p class="material-type">METAL</p>
+
+            <h3>Inductive Detection</h3>
+
+            <p>
+                The inductive proximity sensor detects metallic
+                objects without physical contact.
+            </p>
+
+            <div class="material-route">
+                COMPARTMENT 0
+            </div>
+
+        </article>
+
+
+        <article class="material-card plastic-card">
+
+            <div class="material-top">
+
+                <span class="material-number">02</span>
+
+                <div class="material-symbol">
+                    P
+                </div>
+
+            </div>
+
+            <p class="material-type">PLASTIC</p>
+
+            <h3>High Light Intensity</h3>
+
+            <p>
+                Plastic allows more light to pass through the
+                detection path, producing a higher LDR reading.
+            </p>
+
+            <div class="material-route">
+                COMPARTMENT 1
+            </div>
+
+        </article>
+
+
+        <article class="material-card paper-card">
+
+            <div class="material-top">
+
+                <span class="material-number">03</span>
+
+                <div class="material-symbol">
+                    R
+                </div>
+
+            </div>
+
+            <p class="material-type">PAPER</p>
+
+            <h3>Low Light Intensity</h3>
+
+            <p>
+                Paper blocks more of the laser beam, producing
+                a lower light intensity reading from the LDR.
+            </p>
+
+            <div class="material-route">
+                COMPARTMENT 2
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     VIDEOS
+========================= -->
+<section class="section video-section">
+
+    <div class="section-heading">
+
+        <span class="section-number">05</span>
+
+        <div>
+            <p class="section-kicker">PROJECT MEDIA</p>
+            <h2>Prototype in Progress</h2>
+        </div>
+
+    </div>
+
+
+    <div class="video-grid">
+
+
+        <article class="video-card">
+
+            <div class="video-wrapper">
+
+                <video controls preload="metadata">
+                    <source
+                        src="assets/bottle-components.mp4"
+                        type="video/mp4"
+                    >
+
+                    Your browser does not support the video tag.
+
+                </video>
+
+            </div>
+
+            <div class="video-content">
+
+                <span>01 · COMPONENTS</span>
+
+                <h3>Hardware Components</h3>
+
+                <p>
+                    Overview of the sensors, motors and electronic
+                    components used in the sorting prototype.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article class="video-card">
+
+            <div class="video-wrapper">
+
+                <video controls preload="metadata">
+                    <source
+                        src="assets/bottle-working-progress.mp4"
+                        type="video/mp4"
+                    >
+
+                    Your browser does not support the video tag.
+
+                </video>
+
+            </div>
+
+            <div class="video-content">
+
+                <span>02 · DEVELOPMENT</span>
+
+                <h3>Working Progress</h3>
+
+                <p>
+                    Demonstration of the mechanical sorting system
+                    and ongoing sensor integration.
+                </p>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     HARDWARE
+========================= -->
+<section class="section">
+
+    <div class="section-heading">
+
+        <span class="section-number">06</span>
+
+        <div>
+            <p class="section-kicker">HARDWARE</p>
+            <h2>The System Components</h2>
+        </div>
+
+    </div>
+
+
+    <div class="hardware-grid">
+
+
+        <div class="hardware-card main-controller">
+
+            <span class="hardware-label">CONTROLLER</span>
+
+            <h3>Arduino Uno R3</h3>
+
+            <p>
+                Central controller responsible for reading sensors
+                and controlling the sorting mechanism.
+            </p>
+
+        </div>
+
+
+        <div class="hardware-card">
+
+            <span class="hardware-label">DETECTION</span>
+
+            <h3>IR Sensor</h3>
+
+            <p>
+                Detects bottle presence.
+            </p>
+
+        </div>
+
+
+        <div class="hardware-card">
+
+            <span class="hardware-label">METAL</span>
+
+            <h3>Inductive Sensor</h3>
+
+            <p>
+                Detects metallic materials.
+            </p>
+
+        </div>
+
+
+        <div class="hardware-card">
+
+            <span class="hardware-label">OPTICAL</span>
+
+            <h3>650 nm Laser + LDR</h3>
+
+            <p>
+                Measures transmitted light intensity.
+            </p>
+
+        </div>
+
+
+        <div class="hardware-card">
+
+            <span class="hardware-label">ROTATION</span>
+
+            <h3>28BYJ-48 + ULN2003</h3>
+
+            <p>
+                Rotates the sorting platter.
+            </p>
+
+        </div>
+
+
+        <div class="hardware-card">
+
+            <span class="hardware-label">LID CONTROL</span>
+
+            <h3>SG90 Servo</h3>
+
+            <p>
+                Opens and closes the bottle release lid.
+            </p>
+
+        </div>
+
+
+        <div class="hardware-card">
+
+            <span class="hardware-label">FEEDBACK</span>
+
+            <h3>LEDs + Buzzer</h3>
+
+            <p>
+                Provides system status feedback.
+            </p>
+
+        </div>
+
+
+        <div class="hardware-card">
+
+            <span class="hardware-label">POWER</span>
+
+            <h3>5V USB</h3>
+
+            <p>
+                Provides power to the prototype.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PIN CONFIGURATION
+========================= -->
+<section class="section pin-section">
+
+    <div class="section-heading">
+
+        <span class="section-number">07</span>
+
+        <div>
+            <p class="section-kicker">ELECTRONICS</p>
+            <h2>Current Pin Configuration</h2>
+        </div>
+
+    </div>
+
+
+    <div class="pin-table-wrapper">
+
+        <table class="pin-table">
+
+            <thead>
+
+                <tr>
+                    <th>Component</th>
+                    <th>Arduino Pin</th>
+                    <th>Function</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>IR Sensor</td>
+                    <td>D6</td>
+                    <td>Bottle Detection</td>
+                </tr>
+
+                <tr>
+                    <td>Inductive Sensor</td>
+                    <td>D2</td>
+                    <td>Metal Detection</td>
+                </tr>
+
+                <tr>
+                    <td>SG90 Servo</td>
+                    <td>D5</td>
+                    <td>Lid Control</td>
+                </tr>
+
+                <tr>
+                    <td>Stepper IN1</td>
+                    <td>D8</td>
+                    <td>Platter Rotation</td>
+                </tr>
+
+                <tr>
+                    <td>Stepper IN2</td>
+                    <td>D9</td>
+                    <td>Platter Rotation</td>
+                </tr>
+
+                <tr>
+                    <td>Stepper IN3</td>
+                    <td>D10</td>
+                    <td>Platter Rotation</td>
+                </tr>
+
+                <tr>
+                    <td>Stepper IN4</td>
+                    <td>D11</td>
+                    <td>Platter Rotation</td>
+                </tr>
+
+                <tr>
+                    <td>LDR</td>
+                    <td>A0</td>
+                    <td>Light Intensity</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <p class="table-note">
+        * The LDR analog pin is shown as A0 and can be changed
+        according to the final circuit connection.
+    </p>
+
+</section>
+
+
+<!-- =========================
+     IMPLEMENTATION
+========================= -->
+<section class="section">
+
+    <div class="section-heading">
+
+        <span class="section-number">08</span>
+
+        <div>
+            <p class="section-kicker">IMPLEMENTATION</p>
+            <h2>From Detection to Sorting</h2>
+        </div>
+
+    </div>
+
+
+    <div class="implementation-grid">
+
+
+        <div class="implementation-card">
+
+            <span class="implementation-number">01</span>
+
+            <h3>Detect</h3>
+
+            <p>
+                The IR sensor detects a bottle entering the
+                sorting chamber.
+            </p>
+
+        </div>
+
+
+        <div class="implementation-card">
+
+            <span class="implementation-number">02</span>
+
+            <h3>Check Metal</h3>
+
+            <p>
+                The inductive proximity sensor checks whether
+                the bottle is metallic.
+            </p>
+
+        </div>
+
+
+        <div class="implementation-card">
+
+            <span class="implementation-number">03</span>
+
+            <h3>Measure Light</h3>
+
+            <p>
+                If the material is non-metal, the laser and LDR
+                measure the transmitted light intensity.
+            </p>
+
+        </div>
+
+
+        <div class="implementation-card">
+
+            <span class="implementation-number">04</span>
+
+            <h3>Classify</h3>
+
+            <p>
+                A calibrated threshold separates high-intensity
+                plastic readings from low-intensity paper readings.
+            </p>
+
+        </div>
+
+
+        <div class="implementation-card">
+
+            <span class="implementation-number">05</span>
+
+            <h3>Rotate</h3>
+
+            <p>
+                The 28BYJ-48 stepper motor rotates the platter
+                toward the selected compartment.
+            </p>
+
+        </div>
+
+
+        <div class="implementation-card">
+
+            <span class="implementation-number">06</span>
+
+            <h3>Release</h3>
+
+            <p>
+                The SG90 servo opens the lid, releases the bottle,
+                then closes the lid.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SCOPE REFINEMENT
+========================= -->
+<section class="section refinement-section">
+
+    <div class="section-heading">
+
+        <span class="section-number">09</span>
+
+        <div>
+            <p class="section-kicker">PROJECT REFINEMENT</p>
+            <h2>What Changed</h2>
+        </div>
+
+    </div>
+
+
+    <div class="refinement-card">
+
+        <div class="refinement-main">
+
+            <span class="refinement-tag">
+                INTERIM REPORT II
+            </span>
+
+            <h3>
+                A safer and more focused
+                three-material system.
+            </h3>
+
+            <p>
+                Following prototype evaluation, the system was
+                redesigned around three practical categories:
+                metal, plastic and paper. The optical sensing
+                approach was introduced to improve non-metal
+                classification.
+            </p>
+
+        </div>
+
+
+        <div class="change-list">
+
+            <div class="change-item">
+
+                <span class="change-icon">+</span>
+
+                <div>
+                    <strong>Laser + LDR</strong>
+                    <p>
+                        Introduced for plastic and paper classification.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="change-item">
+
+                <span class="change-icon">→</span>
+
+                <div>
+                    <strong>Three Compartments</strong>
+                    <p>
+                        Final prototype uses metal, plastic and paper.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="change-item">
+
+                <span class="change-icon">✓</span>
+
+                <div>
+                    <strong>Safety Focus</strong>
+                    <p>
+                        Glass sorting was removed from the final scope.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CHALLENGES
+========================= -->
+<section class="section">
+
+    <div class="section-heading">
+
+        <span class="section-number">10</span>
+
+        <div>
+            <p class="section-kicker">ENGINEERING CHALLENGES</p>
+            <h2>What We're Solving</h2>
+        </div>
+
+    </div>
+
+
+    <div class="challenge-grid">
+
+
+        <article class="challenge-card">
+
+            <span>01</span>
+
+            <h3>Light Calibration</h3>
+
+            <p>
+                Finding a reliable LDR threshold is essential
+                because surrounding light and material thickness
+                can affect the sensor reading.
+            </p>
+
+        </article>
+
+
+        <article class="challenge-card">
+
+            <span>02</span>
+
+            <h3>Mechanical Timing</h3>
+
+            <p>
+                Stepper movement and servo timing must be
+                coordinated so the bottle is released correctly.
+            </p>
+
+        </article>
+
+
+        <article class="challenge-card">
+
+            <span>03</span>
+
+            <h3>Material Testing</h3>
+
+            <p>
+                Multiple samples must be tested to verify that
+                the classification threshold works consistently.
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ROADMAP
+========================= -->
+<section class="section roadmap-section">
+
+    <div class="section-heading">
+
+        <span class="section-number">11</span>
+
+        <div>
+            <p class="section-kicker">NEXT STEPS</p>
+            <h2>Development Roadmap</h2>
+        </div>
+
+    </div>
+
+
+    <div class="roadmap">
+
+
+        <div class="roadmap-item active">
+
+            <div class="roadmap-week">
+                17–18
+            </div>
+
+            <div class="roadmap-content">
+
+                <span class="roadmap-status">
+                    IN PROGRESS
+                </span>
+
+                <h3>Sensor Integration</h3>
+
+                <p>
+                    Integrate and calibrate the laser-LDR module
+                    and establish a reliable classification threshold.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="roadmap-item">
+
+            <div class="roadmap-week">
+                19–20
+            </div>
+
+            <div class="roadmap-content">
+
+                <span class="roadmap-status">
+                    UPCOMING
+                </span>
+
+                <h3>Full Sorting Logic</h3>
+
+                <p>
+                    Replace placeholder non-metal routing and
+                    test different material samples.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="roadmap-item">
+
+            <div class="roadmap-week">
+                21–22
+            </div>
+
+            <div class="roadmap-content">
+
+                <span class="roadmap-status">
+                    UPCOMING
+                </span>
+
+                <h3>System Testing</h3>
+
+                <p>
+                    Perform end-to-end tests for all three
+                    material categories and measure accuracy.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="roadmap-item">
+
+            <div class="roadmap-week">
+                23–24
+            </div>
+
+            <div class="roadmap-content">
+
+                <span class="roadmap-status">
+                    UPCOMING
+                </span>
+
+                <h3>Improvements</h3>
+
+                <p>
+                    Tune light thresholds, stepper speed and
+                    servo timing.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="roadmap-item">
+
+            <div class="roadmap-week">
+                25–26
+            </div>
+
+            <div class="roadmap-content">
+
+                <span class="roadmap-status">
+                    FINAL
+                </span>
+
+                <h3>Report & Demonstration</h3>
+
+                <p>
+                    Complete documentation, final presentation
+                    and project demonstration.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     TEAM
+========================= -->
+<section class="section team-section">
+
+    <div class="section-heading">
+
+        <span class="section-number">12</span>
+
+        <div>
+            <p class="section-kicker">GROUP 09</p>
+            <h2>Team Contributions</h2>
+        </div>
+
+    </div>
+
+
+    <div class="team-table-wrapper">
+
+        <table class="team-table">
+
+            <thead>
+
+                <tr>
+                    <th>Member</th>
+                    <th>Role</th>
+                    <th>Contribution</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+
+                    <td>
+                        <strong>T.D.P. Ashalya</strong>
+                        <small>D/BCS/26/0025</small>
+                    </td>
+
+                    <td>
+                        Documentation &
+                        Inductive Sensor
+                    </td>
+
+                    <td>
+                        Report preparation and
+                        inductive sensor re-verification.
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        <strong>W.A.I. Sithumini</strong>
+                        <small>D/BCS/26/0020</small>
+                    </td>
+
+                    <td>
+                        Sensor Integration
+                    </td>
+
+                    <td>
+                        Laser diode and photoresistor
+                        integration and sensor code.
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        <strong>H.P.P. Perera</strong>
+                        <small>D/COE/26/0020</small>
+                    </td>
+
+                    <td>
+                        Hardware Assembly
+                    </td>
+
+                    <td>
+                        Three-compartment platter modification
+                        and optical sensor mounting.
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        <strong>L.A.D.H. Lekamge</strong>
+                        <small>D/BCS/26/0019</small>
+                    </td>
+
+                    <td>
+                        Circuit Design
+                    </td>
+
+                    <td>
+                        Circuit modification and integration
+                        of the laser-LDR system.
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        <strong>P.R.B. Wedakarage</strong>
+                        <small>7370</small>
+                    </td>
+
+                    <td>
+                        Testing & Calibration
+                    </td>
+
+                    <td>
+                        Light threshold testing and
+                        platter rotation calibration.
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+    <div class="supervisor-box">
+
+        <div>
+            <span>SUPERVISOR</span>
+            <strong>W.J. Samaraweera</strong>
+        </div>
+
+        <div>
+            <span>CO-SUPERVISOR</span>
+            <strong>M.A.S.T. Goonatilleke</strong>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FINAL CTA
+========================= -->
+<section class="final-cta section">
+
+    <div class="cta-glow"></div>
+
+    <div class="cta-content">
+
+        <span class="section-kicker">
+            COE12992 · GROUP 09
+        </span>
+
+        <h2>
+            Building smarter
+            <span>sorting, one bottle at a time.</span>
+        </h2>
+
+        <p>
+            A low-cost hardware prototype combining sensors,
+            embedded programming and mechanical automation.
+        </p>
+
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+<footer class="project-footer">
+
+    <div class="footer-left">
+        SMART BOTTLE SORTING SYSTEM
+    </div>
+
+    <div class="footer-center">
+        GENERAL SIR JOHN KOTELAWALA DEFENCE UNIVERSITY
+    </div>
+
+    <div class="footer-right">
+        2026 · GROUP 09
+    </div>
+
+</footer>
+
+
+<script>
+
+    /* Smooth scrolling */
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+
+        link.addEventListener("click", function(e) {
+
+            const target = document.querySelector(
+                this.getAttribute("href")
+            );
+
+            if (target) {
+
+                e.preventDefault();
+
+                target.scrollIntoView({
+                    behavior: "smooth"
+                });
+
+            }
+
+        });
+
+    });
+
+
+    /* Small reveal animation */
+    const observer = new IntersectionObserver(
+        (entries) => {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add("visible");
+
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.08
+        }
+    );
+
+
+    document
+        .querySelectorAll(
+            ".info-card, .material-card, .video-card, .hardware-card, .implementation-card, .challenge-card, .roadmap-item"
+        )
+        .forEach(element => {
+
+            element.classList.add("reveal");
+
+            observer.observe(element);
+
+        });
+
+</script>
+
+</body>
+</html>
